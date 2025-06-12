@@ -7,4 +7,11 @@ def home(request):
 
 def show_cars(request):
     cars = Cars.objects.all()
-    return JsonResponse(cars)
+    cars_list = []
+    for car in cars:
+        cars_list.append({
+            'name': car.name,
+            'launch_date': car.date_added,
+            'type': car.type
+        })
+    return JsonResponse({'cars': cars_list})
