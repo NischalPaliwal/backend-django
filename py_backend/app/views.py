@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from .models import Cars
 
 def home(request):
@@ -6,4 +7,4 @@ def home(request):
 
 def show_cars(request):
     cars = Cars.objects.all()
-    return render(cars)
+    return JsonResponse(cars)
