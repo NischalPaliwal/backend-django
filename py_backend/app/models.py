@@ -2,8 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 class Cars(models.Model):
-    car_type_choice = [('HTB', 'Hatchback'), 
-                       ('SD', 'Sedan'), 
+    car_type_choice = [('HTB', 'Hatchback'),
+                       ('SD', 'Sedan'),
                        ('SUV', 'SUV'), 
                        ('MUV', 'MUV'), 
                        ('LX', 'Luxury')]
